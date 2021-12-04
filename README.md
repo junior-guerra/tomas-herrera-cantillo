@@ -1,2 +1,2 @@
-# tomas-herrera-cantillo
+# Tomas-Herrera-Cantillo
 WEB COLEGIO SITUADA EN PEÑONCITO MAGDALENA
