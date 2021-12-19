@@ -8,17 +8,24 @@ $(".fade-slider").jdSlider({
     isCursor:false,
     speed:1000,});
 
-addEventListener('DOMContentLoaded', () =>{
-    const btn_menu = document.querySelector('.btn_menu')
+const btn_menu = document.querySelector('.btn_menu');
+const menu_items = document.querySelector('.menu_items');
+// Toggle element visibility
 
-    if (btn_menu){
-        btn_menu.addEventListener('click', () => {
-            const menu_items = document.querySelector('.menu_items')
-            menu_items.classList.toggle('show')
-        })
-    }  
+function show(e) {
+	e.classList.toggle('show');
+}
 
-});    
+btn_menu.addEventListener('click', () => {
+	show(menu_items);
+});
+
+const cerrarMenu = document.getElementsByClassName('nav-enlaces');
+for (const link of cerrarMenu) {
+	link.addEventListener('click', () => {
+		show(menu_items);
+	});
+}   
 
 $(".menu ul li a").click(function(e){
 
